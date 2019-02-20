@@ -1,0 +1,44 @@
+html {
+  background: url(money.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: 'Coda', cursive;
+}
+
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+  font-family: 'Coda', cursive;
+
+}
+body {
+
+  font-size: 1em;
+}
+
+.button{
+  background-color: rgba(248, 195, 63, 0.86);
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 20px;
+  border-radius: 3px;
+  justify-content:space-between;
+background-color: rgba(248, 195, 63, 0.38);
+}
+
+.flex-item {
+  text-align: left;
+  border: 12px;
+  margin: auto;
+
+}

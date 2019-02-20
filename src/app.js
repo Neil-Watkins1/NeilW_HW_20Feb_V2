@@ -6,8 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
       startRate: null,
       endRate:null,
       amount:null,
-      rates: [],
-      endAmount: null
+      fromEuroAmount:null,
+      toEuroAmount:null,
+      rates: {},
+      endAmount: null,
+      fromEuroEndAmount: null,
+      toEuroEndAmount: null
     },
 
     mounted(){
@@ -27,14 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       convertCurrency: function(){
 
-this.endAmount = this.amount/this.rates.rates[this.startRate]*this.rates.rates[this.endRate];
-        // this.startRate === "GBP"
-        // this.endRate === "USD"
-        // this.amount === 100
+        this.endAmount = (this.amount/this.rates.rates[this.startRate]*this.rates.rates[this.endRate]).toFixed(2);
+
+
+      },
+
+      convertFromEuro: function(){
+
+        this.fromEuroEndAmount = (this.fromEuroAmount*this.rates.rates[this.endRate]).toFixed(2);
+
+
+      },
+
+      convertToEuro: function(){
+
+        this.toEuroEndAmount = (this.toEuroAmount/this.rates.rates[this.startRate]).toFixed(2);
 
       }
+
     }
 
-  })
-
-});
+  });
+})
